@@ -7,7 +7,7 @@ this is a proyect to QA of fronted
 1. [About this repository](#about-this-repository)
 2. [Environment](#environment)
 3. [System environment variables](#system-environment-variables)
-4. [Ide](#ide:man_technologist:)
+4. [Ide](#ide)
 5. [Installation](#installation)
 6. [Collaboration](#collaboration)
 7. [FAQs](#faqs)
