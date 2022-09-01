@@ -7,8 +7,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "classpath:feature/login.feature"
-,glue = "classpath:com.speedup.qa.stepdefinition.LoginStepDefinition"
+,glue = "classpath:com/speedup/qa/stepdefinition"
 ,snippets = SnippetType.CAMELCASE)
 
 public class LoginRunners {
+
 }
+
