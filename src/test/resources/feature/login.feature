@@ -6,7 +6,7 @@ Feature: login
   Scenario: Login
     Given That user is join LinkeIn
     When the user to request in the login
-      | usuario              | contraseña |
-      | testqacaro@gmail.com | 12345      |
+      | user                 | password     |
+      | testqacaro@gmail.com | Carolina4515 |
     Then the user can to see the name
 
