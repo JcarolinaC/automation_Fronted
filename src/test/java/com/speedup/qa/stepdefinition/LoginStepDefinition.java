@@ -1,6 +1,8 @@
 package com.speedup.qa.stepdefinition;
 
-import com.speedup.qa.tasks.OpenBrowser;
+import com.speddup.qa.models.CredentialsData;
+import com.speddup.qa.taks.LoginUser;
+import com.speddup.qa.taks.OpenBrowser;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,6 +13,8 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
 
+import java.util.List;
+
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
@@ -20,7 +24,7 @@ public class LoginStepDefinition {
     private WebDriver myBrowser;
 
     @Before
-    public void setUpOnstage(){
+    public void setUpOnstage() {
         setTheStage(Cast.whereEveryoneCan(BrowseTheWeb.with(myBrowser)));
         theActorCalled("Carolina Ceballos");
     }
@@ -32,7 +36,8 @@ public class LoginStepDefinition {
     }
 
     @When("^the user to request in the login$")
-    public void theUserToRequestInTheLogin() {
+    public void theUserToRequestInTheLogin(List<CredentialsData> data) {
+        OnStage.theActorInTheSpotlight().attemptsTo(LoginUser.withData(data.get(0)));
 
     }
 
